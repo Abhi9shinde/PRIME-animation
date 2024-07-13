@@ -1,0 +1,148 @@
+body {
+    background: url(background.jpg);
+    background-size: cover;
+    backdrop-filter: blur(20px);
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.main {
+    height: 97vh;
+    background-image: url('https://drinkprime.com/cdn/shop/files/PrimeX_Web_DropBanner_Desktop_4320x1926_a7e7aff7-d6c3-488d-8286-b3be0c6529ad_2000x.jpg?v=1717424702');
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    transition: 0.7s all;
+}
+
+.none {
+    margin-left: 0;
+}
+
+.nav:hover {
+    background-color: white;
+    color: black;
+}
+
+.nav:hover #navlink li a {
+    color: black;
+}
+
+.nav:hover button {
+    color: black;
+    border-color: black;
+    cursor: pointer;
+}
+
+#navlink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding-top: 0px;
+    margin-left: 0;
+    margin-top: 1.5em;
+    padding-bottom: 0;
+}
+
+#navlink li {
+    padding: 0 20px;
+}
+
+#navlink li a {
+    text-decoration: none;
+    color: white;
+    font-family: "Kanit", sans-serif;
+    font-weight: 500;
+    font-size: 1.3em;
+    transition: color 0.3s ease;
+}
+
+h1 {
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+    font-family: "Anton SC", sans-serif;
+    font-size: 5em;
+    padding-bottom: 0;
+}
+
+button {
+    margin-right: 0.5em;
+    background: transparent;
+    padding: 1em 3em;
+    font-size: large;
+    transition: 0.5s all;
+    color: white;
+    border-color: white;
+}
+
+
+
+p {
+    display: flex;
+    font-size: 400px;
+    font-family: "Anton SC", sans-serif;
+    color: white;
+    text-align: center;
+    align-self: center;
+
+}
+
+.banner {
+    height: 70vh;
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.banner .product {
+    /* background-color: red; */
+    width: 500px;
+    height: 550px;
+    position: absolute;
+    bottom: 170px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    z-index: 1;
+    transition: 0.7s;
+    --left: 0px;
+    display: flex;
+}
+
+.banner .product .drink {
+    background:
+        var(--url) var(--left) 0,
+        url(soda.png);
+    background-size: auto 100%;
+    width: 280px;
+    aspect-ratio: 2 / 4;
+    background-blend-mode: multiply;
+    mask-image: url(soda.png);
+    mask-size: auto 100%;
+    transition: 0.7s;
+    position: absolute;
+    left: 80%;
+    transform: translateX(-50%);
+}
+
+.banner .product:hover {
+    --left: -1040px;
+    transform: translateX(-50%) translateY(-120px);
+}
+
+.banner .product .drink:nth-child(2) {
+    opacity: 0;
+}
+
+.banner .product:hover .drink:nth-child(2) {
+    opacity: 1;
+}
