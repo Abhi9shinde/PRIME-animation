@@ -8,7 +8,10 @@ body {
 }
 
 .main {
-    height: 97vh;
+    height: auto;
+   background-size: contain;
+   background-position: 0 0;
+   background-repeat: no-repeat;
     background-image: url('https://drinkprime.com/cdn/shop/files/PrimeX_Web_DropBanner_Desktop_4320x1926_a7e7aff7-d6c3-488d-8286-b3be0c6529ad_2000x.jpg?v=1717424702');
 }
 
@@ -98,8 +101,8 @@ p {
 }
 
 .banner {
-    height: 70vh;
-    /* overflow: hidden; */
+    height: 200vh;
+    overflow: hidden;
     position: relative;
 }
 
